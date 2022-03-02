@@ -175,9 +175,9 @@
 
     const getCountDown = () => {
         let now = Date.now();
-        let remainingTime = SpecialDay - now + dayOffsetInMinutes*OneMinuteMs
+        let remainingTime = SpecialDay - now + dayOffsetInMinutes*OneMinuteMs + 13.5*OneHourMs
         let nbDay = Math.floor(remainingTime/OneDayMs)
-        let nbHoursWithoutDay = Math.floor((remainingTime - nbDay*OneDayMs)/OneHourMs + 13.5)
+        let nbHoursWithoutDay = Math.floor((remainingTime - nbDay*OneDayMs)/OneHourMs)
         DayEl.textContent = nbDay;
         hoursEl.textContent = nbHoursWithoutDay;
         if (remainingTime > 0){clearInterval(countDownInterval)}
