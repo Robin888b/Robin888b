@@ -146,12 +146,9 @@
         let nbHoursWithoutDay = Math.floor((remainingTime - nbDay*OneDayMs)/OneHourMs + 13.5)
         DayEl.textContent = nbDay;
         hoursEl.textContent = nbHoursWithoutDay;
-
-        if (remainingTime > 0){
-            clearInterval(countDownInterval)
-        }
+        if (remainingTime > 0){clearInterval(countDownInterval)}
     }
-    let countDownInterval = setInterval(getCountDown, 1000)
+    let countDownInterval = setInterval(getCountDown, 600000)
     getCountDown() // start
 </script>
 </body>
