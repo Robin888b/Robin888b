@@ -9,7 +9,7 @@
 <h3 align="left">My socials medias</h3>
 <p align="left">
 <a href="https://codepen.io/https://codepen.io/robin888b" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="https://codepen.io/robin888b" height="30" width="40" /></a>
-<a href="https://twitter.com/robin888b" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="robin888b" height="30" width="40" /></a>
+<a href="https://twitter.com/robin888b" target="blank"><img align="center" src="https://raw.githubusercontent.com/Robin888b/Robin888b/b8ae6448e73a1f4b8e72a1bcf0c5dcb14f79a7ec/_twitter.svg" alt="robin888b" height="30" width="40" /></a>
 
 </p>
 
