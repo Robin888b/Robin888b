@@ -8,6 +8,7 @@
 
 <h3 align="left">My socials medias</h3>
 <p align="left">
+<a href="https://robin888b.github.io/Robin888b/" target="blank"><img align="center" src="https://raw.githubusercontent.com/Robin888b/Robin888b/aefb9e8bda6cd18f47e1d5dfbf9feafa9c1f8095/src/svg/globe.svg"height="30" width="40" /></a>
 <a href="https://codepen.io/https://codepen.io/robin888b" target="blank"><img align="center" src="https://raw.githubusercontent.com/Robin888b/Robin888b/e389ffad615780aadbdd2683e8575e646c604737/src/svg/codepen.svg" alt="https://codepen.io/robin888b" height="30" width="40" /></a>
 <a href="https://www.deviantart.com/robin888b" target="blank"><img align="center" src="https://raw.githubusercontent.com/Robin888b/Robin888b/e389ffad615780aadbdd2683e8575e646c604737/src/svg/deviant-art.svg" height="30" width="40" /></a>
 <a href="#" target="blank"><img align="center" src="https://raw.githubusercontent.com/Robin888b/Robin888b/e389ffad615780aadbdd2683e8575e646c604737/src/svg/discord.svg" height="30" width="40" /></a>
