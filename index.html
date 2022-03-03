@@ -41,8 +41,13 @@
         .allign {float: center;} .allign li {float: left;list-style: none;}
 
         /* Spoileur */
-        .spoileur {border: none;padding: 0;font-size: 1.2em;background-color: #8F79DB;color: #8F79DB;border-radius: 5px;}
-        .spoileur.clicked {background: none;color: #fff;cursor: default;}
+        .spoileur {border: none;padding: 0;font-size: 1.2em;background-color: #8F79DB;color: #ffffff00;border-radius: 5px;}
+        .spoileur.clicked {background: none;color: #fff;cursor: default;animation: spoil 0.2s}
+        @keyframes spoil {
+            0% {background-color: #8e79db;color: #ffffff00;}
+            25% {color: #ffffff00;}
+            100% {background-color: #8e79db00;color: #fff;}
+        }
 
 
         /* Modal Discord */
@@ -52,8 +57,26 @@
         .modal{width: 95%; max-width: 500px;min-width: 300px; padding: 30px; background: #fff; color: #000;border-radius: 5px; position: absolute;top: 40%;left: 50%;transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.4s ease-out;}
         .modal-container.active .modal {opacity: 1;transition: opacity 0.4s 0.2s ease-out;}
         .close-modal {padding: 8px 10px; border-radius: 5px; position: absolute;top: 10px; right: 10px; cursor: pointer; background: #bcb1e4; height: 30px;width: 30px;}
+        .close-modal img {padding: 0; border: none;}
         .close-modal:hover {background: #d1cbe7} .modal h1 {margin-bottom: 10px;} .modal p {line-height: 1.4;} 
         .modal-container.active {visibility: visible;}
+        .modal-container.gay .modal {background-image: url(https://github.com/Robin888b/Robin888b/blob/main/src/png/GayMenFlag500x300.png?raw=true);background-attachment:local;background-size: 85%;border-radius: 0px;}
+        .modal-container.gay .close-modal {
+            background-color: #fff;
+            border-radius: 25px;
+        }
+        
+        
+
+
+        .gay-btn {
+            background: url(https://github.com/Robin888b/Robin888b/blob/main/src/png/GayMenFlag200x120.png?raw=true), url(https://github.com/Robin888b/Robin888b/blob/main/src/png/GayMenFlag200x120.png?raw=true);
+            background-attachment:local;
+            background-size: 45px;
+            -webkit-background-clip: text;
+            font-size: 1.2em;color: transparent;padding-right: 5px;cursor: help;
+        }.gay-btn:hover{}
+
 
         /* Gradient */
         @keyframes gradient {
@@ -72,7 +95,7 @@
                 My name is Robin<br>
                 I speak french and try to learn english</p>
                 <buton class="normal-button" onclick="openYearOldModal()">I will be 18Yo in <span id="nb-days">0</span> days and <span id="nb-hours"></span> hours</buton>
-                <div><ul class="allign"><li><button class="normal-button" onclick="openWhatIsGayModal()">Gay⚣</button><button class="normal-button " onclick="openWhatIsFurryModal()">Furry🐺</button></li><li><button class="spoileur" onclick="toggleSpoileur()">(Fursona : Raven Spart)</button></li></ul></div>
+                <div><ul class="allign"><li><button class="gay-btn" onclick="openWhatIsGayModal()">Gay⚣</button><button class="normal-button " onclick="openWhatIsFurryModal()">Furry🐺</button></li><li><button class="spoileur" onclick="toggleSpoileur()">(Fursona : Raven Spart)</button></li></ul></div>
                 <p><br>I learn Drawing 🎨 and Programming 💻</p><br>
 
             <p id="social" align="center"> <!-- Solial Icons links-->
@@ -93,7 +116,7 @@
 <div class="modal-container">
     <div class="overlay modal-trigger"></div>
     <div class="modal">
-        <button class="close-modal modal-trigger"><img src="https://raw.githubusercontent.com/Robin888b/Robin888b/fad00f2d1bc0fe3fdfbdca2aa348d37a63321231/src/svg/cross.svg" height="15" width="15"></button>
+        <button class="close-modal modal-trigger"><img align="top" src="https://raw.githubusercontent.com/Robin888b/Robin888b/fad00f2d1bc0fe3fdfbdca2aa348d37a63321231/src/svg/cross.svg" height="15" width="15"></button>
         <h1 id="modal-title-h1" >Discord</h1>
         <h4 id="modal-text-h4" >Discord username : <code>Robin888b#0423</code></h4>
         <p id="modal-text-p" >You can find me in <a href="https://discord.gg/rvUJ5cvgfX">Curiosity</a>(french); <a href="https://discord.gg/d8mJrmcqdF">Gunivers</a>(bilingual) & <a href="https://discord.gg/discord-developers">Discord Developers</a>(english)</p>
@@ -119,14 +142,17 @@
 
     const modalContainer = document.querySelector(".modal-container")
     const modalTrigger = document.querySelectorAll(".modal-trigger")
-    modalTrigger.forEach(trigger => trigger.addEventListener("click",function toggleModal(){modalContainer.classList.toggle("active")}))
+    modalTrigger.forEach(trigger => trigger.addEventListener("click",function toggleModal(){
+        modalContainer.classList.remove("active")
+        setTimeout(() => {modalContainer.classList.remove("gay")}, 500);
+    }))
 
     function openDiscordModal(){ // Discord
         modalTitle.textContent = "Social ⇢ Discord"
         modalTextH4.textContent = "Discord username : Robin888b#0423"
         modalTextP.innerHTML = 'You can find me in <a href="https://discord.gg/rvUJ5cvgfX">Curiosity</a>(french); <a href="https://discord.gg/d8mJrmcqdF">Gunivers</a>(bilingual) & <a href="https://discord.gg/discord-developers">Discord Developers</a>(english)'
         modalTextH6.textContent = "I don't accept friend requests from strangers"
-        modalContainer.classList.toggle("active")
+        modalContainer.classList.add("active")
     }
 
     function openWhatIsGayModal(){ // What is Gay
@@ -134,7 +160,8 @@
         modalTextH4.textContent = "\"gay\" means homosexual"
         modalTextP.textContent = "this term is used to describe someone who is attracted to people of the same sex,\nNot to people of the opposite sex like the majority"
         modalTextH6.textContent = "it does not mean being more masculine or feminine and has no relation to being transgender or not"
-        modalContainer.classList.toggle("active")
+        modalContainer.classList.add("gay")
+        modalContainer.classList.add("active")
     }
 
     function openWhatIsFurryModal(){ // What is Furry
@@ -142,7 +169,7 @@
         modalTextH4.innerHTML = ""
         modalTextP.textContent = "The word furry has several meanings, dependent on the context in which it is used. Predominantly, it means \"consisting of or resembling fur\". It also pertains to an interest in anthropomorphic animals and/or mythological (like here) or imaginary creatures which possess human or superhuman capabilities.\n\nThe plural form of furry in all its contexts is furs or furries; the subjects of furry interest are also known as furries. Because people in the fandom tend to identify closely with their avatars (or fursonas), the word is often used to mean a group of furry characters in art or roleplay."
         modalTextH6.innerHTML = "source : <a href=\"https://en.wikifur.com/wiki/Furry\">Wikifur</a>"
-        modalContainer.classList.toggle("active")
+        modalContainer.classList.add("active")
     }
 
     function openYearOldModal(){ // Year Old
@@ -150,7 +177,7 @@
         modalTextH6.innerHTML = ""
         modalTextP.innerHTML = "I was born on November 4, 2004<br>So I will be 18 on November 4, 2022"
         modalTextH4.innerHTML = ""
-        modalContainer.classList.toggle("active")
+        modalContainer.classList.add("active")
     }
 
 
