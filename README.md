@@ -1,4 +1,4 @@
-<h3 align="center">Just a random young French wolf who is learning to develop</h3>
+<h3 align="center">Just a random young French student who is learning to develop</h3>
 
 <p align="left"> <a href="https://twitter.com/robin888b" target="blank"><img src="https://img.shields.io/twitter/follow/robin888b?logo=twitter&style=for-the-badge" alt="robin888b" /></a> <img src="https://komarev.com/ghpvc/?username=robin888b&label=Profile%20views&color=0e75b6&style=flat" alt="robin888b" /></p>
 
